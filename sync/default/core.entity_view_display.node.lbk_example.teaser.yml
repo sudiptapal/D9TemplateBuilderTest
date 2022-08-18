@@ -1,0 +1,42 @@
+uuid: 3b611fb8-3a05-48a1-a704-e25e16cbaaf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lbk_example.body
+    - field.field.node.lbk_example.field_video_file
+    - field.field.node.lbk_example.field_video_link
+    - field.field.node.lbk_example.field_video_text_formatted
+    - field.field.node.lbk_example.field_video_text_plain
+    - field.field.node.lbk_example.layout_builder__layout
+    - node.type.lbk_example
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: 71dfvjhxZF-VDgG7ik11GCFUQPzywvJ3r7pyL5QptX4
+id: node.lbk_example.teaser
+targetEntityType: node
+bundle: lbk_example
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_video_file: true
+  field_video_link: true
+  field_video_text_formatted: true
+  field_video_text_plain: true
+  layout_builder__layout: true
